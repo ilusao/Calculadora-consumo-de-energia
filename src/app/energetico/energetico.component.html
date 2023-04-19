@@ -1,0 +1,50 @@
+<form>
+
+<h1>Calculadora de consumo de energia</h1>
+<a>caso não tenha um desses itens, só deixa em branco</a>
+<br>
+<label for="pessoas">Quantas pessoas? <br><input type="number" name="pessoas" [(ngModel)]="pessoas"> </label>
+<br>
+<br><br>
+
+<label for="comodos">Quantos computadores?<br><input type="number" name="computadores" [(ngModel)]="computadores"></label>
+<>
+<label for="computadores1">uso por hora?<br><input type="number" name="computadores1" [(ngModel)]="computadores1"></label>
+<br><br>
+<label for="tv">Quatos tv?<br><input type="number" name="tv" [(ngModel)]="tv" ></label>
+<>
+<label for="tv1">uso por hora?<br><input type="number" name="tv1" [(ngModel)]="tv1" ></label>
+<br><br>
+<label for="computadores">Quantas maquinas de lava?<br><input type="number" name="lavar" [(ngModel)]="lavar"></label>
+<>
+<label for="computadores">uso por hora?<br><input type="number" name="lavar" [(ngModel)]="lavar"></label>
+<br><br>
+<label for="computadores">tem quantas secadoras?<br><input type="number" name="secar" [(ngModel)]="secar"></label>
+<>
+<label for="computadores">uso por hora?<br><input type="number" name="secar" [(ngModel)]="secar"></label>
+<br><br>
+<label for="tarifa">Qual é a tarifa de energia? (R$/kWh)<br><input type="number" name="tarifa" [(ngModel)]="tarifa"></label>
+<br>
+
+<br><br>
+
+<button class="btn btn-lg btn-outline-primary mb-2 me-2" (click)="calcular();openBottom(content)">calcular</button>
+<br>
+
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title">RESULTADO</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+  </div>
+  <input [value]="resultado">
+  <div class="offcanvas-body">
+    <p>Essas informacoes foram tirados do <a href="https://www.portalsolar.com.br/como-calcular-o-consumo-de-energia-em-kwh">Portal solar.</a> </p>
+  </div>
+</ng-template>
+
+
+</form>
+
+
+
+

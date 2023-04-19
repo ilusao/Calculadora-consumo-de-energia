@@ -18,15 +18,26 @@ export class EnergeticoComponent {
   tv1: number = 0;
   conta2: number = 0;
   lavar: number = 0;
+  lavar1: number = 0;
   conta3: number = 0;
   secar: number = 0;
+  secar1: number = 0;
   conta4: number = 0;
   tarifa: number = 0;
   resultado: number =0;
 
 
   calcular() {
-    this.conta1 = this.computadores * this.computadores1 / 1000
+    this.conta1 = (((this.computadores * this.computadores1) / 1000) * 30) * this.tarifa
+
+    this.conta2 = (((this.tv * this.tv1) / 1000) * 30) * this.tarifa
+
+    this.conta3 = (((this.lavar * this.lavar1) / 1000) * 30) * this.tarifa
+
+    this.conta4 = (((this.secar * this.secar1) / 1000) * 30) * this.tarifa
+
+    this.resultado = this.conta1+this.conta2+this.conta3+this.conta4
+
 
 
   }
